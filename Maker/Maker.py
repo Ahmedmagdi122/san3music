@@ -3,12 +3,12 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 
 
-API_ID = int("26022994")
-API_HASH = "2e84a6b68bd6b5a79f46e8192668e0ea"
+API_ID = int("29621516")
+API_HASH = "fa21d1a59b76b215cb366771255a13bf"
 Bots = []
 off =None
-ch = "rb_ro"
-DEVS = ["r_r_b0"]
+ch = "U5_26"
+DEVS = ["WT_F33"]
 
 @Client.on_message(filters.private)
 async def me(client, message):
@@ -21,9 +21,9 @@ async def me(client, message):
 async def start(client, message):
    if message.from_user.username in DEVS:
      kep = ReplyKeyboardMarkup([[": صنع بوت :", ": حذف بوت :"], [": البوتات المصنوعه :"], [": تعطيل المجاني :", ": تفعيل المجاني :"], [": السورس :"],[": تفعيل التواصل :", ": تعطيل التواصل :"]], resize_keyboard=True)
-     return await message.reply_text("اهلا بك عزيزي في صانع فينوم.", reply_markup=kep)
+     return await message.reply_text("اهلا بك عزيزي في صانع ديلر.", reply_markup=kep)
    kep = ReplyKeyboardMarkup([[": صنع بوت :", ": حذف بوت :"], [": السورس :", ": طريقه التنصيب :"], [": مطور السورس :"]], resize_keyboard=True)
-   await message.reply_text("اهلا بك عزيزي في صانع فينوم ،", reply_markup=kep)
+   await message.reply_text("اهلا بك عزيزي في صانع ديلر ،", reply_markup=kep)
     
    
 @Client.on_message(filters.command([": السورس :"], ""))
@@ -32,10 +32,10 @@ async def alivehi(client: Client, message):
         [
                 [
                     InlineKeyboardButton(
-                        "ChNnEl SoUrCe ♡", url=f"https://t.me/RB_RO"),
+                        "ChNnEl SoUrCe ♡", url=f"https://t.me/U5_26"),
                 ],[
                     InlineKeyboardButton(
-                        "مطور السورس ♡", url=f"https://t.me/R_R_B0"),
+                        "مطور السورس ♡", url=f"https://t.me/WT_F33"),
                 ],
         ]
     )
@@ -49,17 +49,17 @@ async def alivehi(client: Client, message):
 @Client.on_message(filters.command(": طريقه التنصيب :", ""))
 async def addbot(client: Client, message):
     await message.reply_text(f"""**- تابع اسفل لطريقه التنصيب .**
-- -› [اضغط هنا لطريقه التنصيب. ](https://t.me/rb_ro)
-قناة السورس -› [𝑠𝑜𝑢𝑟𝑐𝑒 venom](t.me/rb_ro)
+- -› [اضغط هنا لطريقه التنصيب. ](https://t.me/U5_26)
+قناة السورس -› [𝑠𝑜𝑢𝑟𝑐𝑒 𝒅𝒚𝒍𝒂𝒓](t.me/U5_26)
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ChNnEl SoUrCe ♡", url=f"https://t.me/rb_ro"),
+                        "ChNnEl SoUrCe ♡", url=f"https://t.me/U5_26"),
                 ],[
                     InlineKeyboardButton(
-                        "مطور السورس ♡", url=f"https://t.me/R_R_B0"),
+                        "مطور السورس ♡", url=f"https://t.me/WT_F33"),
                 ],
             ]
         ),
@@ -68,16 +68,16 @@ async def addbot(client: Client, message):
     
 @Client.on_message(filters.command([": مطور السورس :"], ""))
 async def aboutd5ev(client: Client, message):
-    usr = await client.get_chat(R_R_B0)
+    usr = await client.get_chat(WT_F33)
     name = usr.first_name
-    bio = (await client.get_chat(5345637082)).bio
+    bio = (await client.get_chat(7178648520)).bio
     async for photo in client.iter_profile_photos(5345637082, limit=1):
-                    await message.reply_photo(photo.file_id, caption=f"""- اليك مطور سورس فينوم -› \n\n𝐧𝐚𝐦𝐞 -› {usr.first_name}\n• 𝐮𝐬𝐞𝐫 -› @{usr.username}\n• 𝐛𝐢𝐨 -› {usr.bio}""", 
+                    await message.reply_photo(photo.file_id, caption=f"""- اليك مطور سورس ديلر -› \n\n𝐧𝐚𝐦𝐞 -› {usr.first_name}\n• 𝐮𝐬𝐞𝐫 -› @{usr.username}\n• 𝐛𝐢𝐨 -› {usr.bio}""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        name, user_id=5345637082)
+                        name, user_id=7178648520)
                 ],
             ]
         ),
